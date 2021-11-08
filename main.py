@@ -1,10 +1,14 @@
 from ctypes import cdll, c_double, byref
 import pathlib
 
-this_file_path = pathlib.Path("Subdirect1", "__file__")
+this_file_path = pathlib.Path(__file__)
 this_file_directory = this_file_path.parent.absolute()
 # dll_path = this_file_directory / 'refprop.dll'
-so_path = this_file_directory / Subdirect1 / 'libFakeRefProp.so'
+
+ref_file_path = os.chdir('/Subdirect1')
+
+so_path = ref_file_path / Subdirect1 / 'libFakeRefProp.so'
+
 api = cdll.LoadLibrary(str(so_path))
 arg_1 = c_double(1.0)
 arg_2 = c_double(2.0)

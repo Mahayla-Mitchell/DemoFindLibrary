@@ -2,6 +2,7 @@ from ctypes import cdll, c_double, byref
 import pathlib
 
 this_file_path = pathlib.Path(__file__)
+this_file_path = Path('/Subdirect1')
 this_file_directory = this_file_path.parent.absolute()
 dll_path = this_file_directory / 'refprop.dll'
 so_path = this_file_directory / 'libFakeRefProp.so'

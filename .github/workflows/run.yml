@@ -10,5 +10,4 @@ jobs:
       with:
         python-version: 3.7
     - name: Run the Quick Test
-      working-directory: ./mainfolder
       run: python3 main.py

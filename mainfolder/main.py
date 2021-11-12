@@ -1,9 +1,9 @@
 from ctypes import cdll, c_double, byref
 import pathlib
 
-this_file_path = pathlib.Path(__file__)
+this_file_path = pathlib.Path(mainfolder)
 this_file_directory = this_file_path.parent.absolute()
-this_subdir = mainfolder / this_file_directory / 'sub2' / 'subsub3' / 'here' / 'libFakeRefProp.so'
+this_subdir =  this_file_directory / 'sub2' / 'subsub3' / 'here' / 'libFakeRefProp.so'
 dll_path = this_file_directory / 'refprop.dll'
 so_path = this_file_directory / 'libFakeRefProp.so'
 api = cdll.LoadLibrary(str(this_subdir))
